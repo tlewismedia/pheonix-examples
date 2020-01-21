@@ -1,0 +1,7 @@
+<h1>HTML</h1>
+
+<%= "<hello>" %>
+<%= raw "<br><span>span</span>" %>
+
+<%= content_tag :p, "paragraph" %>
+<%= content_tag :span, "span" %>
