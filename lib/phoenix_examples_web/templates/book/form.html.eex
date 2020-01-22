@@ -9,6 +9,23 @@
   <%= text_input f, :title %>
   <%= error_tag f, :title %>
 
+
+  <div>
+    <%= label f, :color %>
+    <%= color_input(f, :color) %>
+  </div>
+
+
+
+
+
+  <div>
+    ID of Field: <%= input_id(f, :title) %>
+  </div>
+  <div>
+    Name of Field: <%= input_name(f, :title) %>
+  </div>
+
   <%= label f, :pages %>
   <%= number_input f, :pages %>
   <%= error_tag f, :pages %>

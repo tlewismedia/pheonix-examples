@@ -3,7 +3,7 @@ defmodule PhoenixExamples.Repo do
     otp_app: :phoenix_examples,
     adapter: Ecto.Adapters.Postgres
 
-  import Ecto.Query
+  # import Ecto.Query
 
   # alias PhoenixExamples.{Page}
 

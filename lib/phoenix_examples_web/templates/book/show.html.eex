@@ -12,6 +12,11 @@
     <%= @book.pages %>
   </li>
 
+  <li>
+    <strong>Color:</strong>
+    <%= @book.color %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.book_path(@conn, :edit, @book) %></span>

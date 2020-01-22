@@ -5,6 +5,7 @@ defmodule PhoenixExamples.Books.Book do
   schema "books" do
     field :pages, :integer
     field :title, :string
+    field :color, :string
 
     timestamps()
   end
@@ -12,7 +13,7 @@ defmodule PhoenixExamples.Books.Book do
   @doc false
   def changeset(book, attrs) do
     book
-    |> cast(attrs, [:title, :pages])
+    |> cast(attrs, [:title, :pages, :color])
     |> validate_required([:title, :pages])
   end
 end
