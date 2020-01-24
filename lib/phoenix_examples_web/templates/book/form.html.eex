@@ -1,18 +1,31 @@
-<%= form_for @changeset, @action, fn f -> %>
+<%= form_for @changeset, @action, fn form -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
 
-  <%= label f, :title %>
-  <%= text_input f, :title %>
-  <%= error_tag f, :title %>
+  <%= label form, :title %>
+  <%= text_input form, :title %>
+  <%= error_tag form, :title %>
 
 
   <div>
-    <%= label f, :color %>
-    <%= color_input(f, :color) %>
+    <%= label form, :color %>
+    <%= color_input(form, :color) %>
+  </div>
+
+  <div>
+    <%= label form, :genre %>
+
+    <%= radio_button(form, :genre, "fiction") %> Fiction
+
+    <%= radio_button(form, :genre, "nonfiction") %> Nonfiction
+
+    <%= radio_button(form, :genre, "history") %> History
+
+
+
   </div>
 
 
@@ -20,15 +33,15 @@
 
 
   <div>
-    ID of Field: <%= input_id(f, :title) %>
+    ID of Field: <%= input_id(form, :title) %>
   </div>
   <div>
-    Name of Field: <%= input_name(f, :title) %>
+    Name of Field: <%= input_name(form, :title) %>
   </div>
 
-  <%= label f, :pages %>
-  <%= number_input f, :pages %>
-  <%= error_tag f, :pages %>
+  <%= label form, :pages %>
+  <%= number_input form, :pages %>
+  <%= error_tag form, :pages %>
 
   <div>
     <%= submit "Save" %>
